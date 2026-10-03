@@ -1,0 +1,398 @@
+/* =========================
+   RESET
+========================= */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  margin: 0;
+
+  font-family: Arial, sans-serif;
+}
+
+
+/* =========================
+   NAVBAR
+========================= */
+
+header {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 20px 40px;
+}
+
+
+/* =========================
+   LOGO
+========================= */
+
+.logo {
+  font-size: 30px;
+  font-weight: bold;
+
+  color: #00bfff;
+}
+
+
+/* =========================
+   DESKTOP NAVIGATION
+========================= */
+
+nav {
+  display: flex;
+  gap: 40px;
+}
+
+nav a {
+  text-decoration: none;
+
+  font-size: 18px;
+
+  color: #555;
+}
+
+
+/* =========================
+   USERNAME BUTTON
+========================= */
+
+.user-btn {
+  border: none;
+  border-radius: 12px;
+
+  padding: 12px 20px;
+
+  font-size: 16px;
+
+  background-color: #e5f7ff;
+  color: #00aaff;
+}
+
+
+/* =========================
+   HAMBURGER
+========================= */
+
+.hamburger {
+  display: none;
+
+  border: none;
+  background: none;
+
+  font-size: 30px;
+
+  cursor: pointer;
+}
+
+
+/* =========================
+   MOBILE MENU
+========================= */
+
+.menu-list {
+  display: none;
+
+  position: absolute;
+
+  right: 15px;
+  top: 65px;
+
+  width: 200px;
+
+  padding: 15px;
+
+  background-color: white;
+
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+
+  z-index: 10;
+}
+
+
+/* MENU LINKS */
+
+.menu-list a {
+  display: block;
+
+  padding: 12px;
+
+  text-decoration: none;
+
+  color: #555;
+}
+
+
+/* HOVER */
+
+.menu-list a:hover {
+  background-color: #e5f7ff;
+
+  color: #00aaff;
+}
+
+
+/* =========================
+   HERO SECTION
+========================= */
+
+main {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  padding: 50px 40px;
+}
+
+
+/* LEFT TEXT */
+
+.hero {
+  width: 55%;
+}
+
+
+/* HEADING */
+
+h1 {
+  margin: 0;
+
+  font-size: 42px;
+
+  line-height: 1.1;
+
+  color: #40546a;
+}
+
+h1 span {
+  color: #00aaff;
+}
+
+
+/* =========================
+   PARAGRAPH
+========================= */
+
+p {
+  max-width: 550px;
+
+  font-size: 18px;
+
+  line-height: 1.5;
+
+  color: #777;
+}
+
+
+/* =========================
+   BOOK BUTTON
+========================= */
+
+.book-btn {
+  border: none;
+
+  border-radius: 15px;
+
+  padding: 18px 35px;
+
+  font-size: 16px;
+
+  font-weight: bold;
+
+  background-color: #20aef3;
+
+  color: white;
+}
+
+
+/* =========================
+   IMAGE
+========================= */
+
+.image-container {
+  width: 40%;
+}
+
+.image-container img {
+  width: 100%;
+
+  height: 450px;
+
+  object-fit: cover;
+}
+
+
+/* =========================
+   TABLET
+   768px
+========================= */
+
+@media (max-width: 768px) {
+
+  header {
+    padding: 15px 25px;
+  }
+
+  .logo {
+    font-size: 24px;
+  }
+
+  nav {
+    gap: 20px;
+  }
+
+  nav a {
+    font-size: 15px;
+  }
+
+  .user-btn {
+    font-size: 13px;
+
+    padding: 10px 15px;
+  }
+
+
+  /* HERO */
+
+  main {
+    flex-direction: column;
+
+    text-align: center;
+
+    padding: 30px 25px;
+  }
+
+  .hero {
+    width: 100%;
+  }
+
+
+  /* HEADING */
+
+  h1 {
+    font-size: 32px;
+  }
+
+
+  /* PARAGRAPH */
+
+  p {
+    max-width: 600px;
+
+    margin: 15px auto;
+
+    font-size: 16px;
+  }
+
+
+  /* BUTTON */
+
+  .book-btn {
+    padding: 15px 25px;
+
+    font-size: 14px;
+  }
+
+
+  /* IMAGE */
+
+  .image-container {
+    width: 60%;
+
+    margin-top: 30px;
+  }
+
+  .image-container img {
+    height: 300px;
+  }
+}
+
+
+/* =========================
+   MOBILE
+   600px
+========================= */
+
+@media (max-width: 600px) {
+
+  /* HIDE DESKTOP NAVIGATION */
+
+  nav {
+    display: none;
+  }
+
+
+  /* HIDE USER BUTTON */
+
+  .user-btn {
+    display: none;
+  }
+
+
+  /* SHOW HAMBURGER */
+
+  .hamburger {
+    display: block;
+  }
+
+
+  /* =========================
+     SHOW MENU ON FOCUS
+  ========================= */
+
+  .hamburger:focus + .menu-list {
+    display: block;
+  }
+
+
+  /* NAVBAR */
+
+  header {
+    padding: 15px;
+  }
+
+  .logo {
+    font-size: 22px;
+  }
+
+
+  /* HERO */
+
+  main {
+    padding: 20px 15px;
+  }
+
+
+  /* HEADING */
+
+  h1 {
+    font-size: 27px;
+  }
+
+
+  /* PARAGRAPH */
+
+  p {
+    font-size: 15px;
+  }
+
+
+  /* IMAGE */
+
+  .image-container {
+    width: 80%;
+  }
+
+  .image-container img {
+    height: 250px;
+  }
+}
